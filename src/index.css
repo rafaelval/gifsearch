@@ -75,6 +75,7 @@ h3 {
 }
 
 .card {
+  max-height: 30rem;
   align-content: center;
   align-items: center;
   background-color: white;
