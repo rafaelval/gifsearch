@@ -67,6 +67,23 @@ h3 {
   -webkit-text-stroke: 3px rgb(100, 100, 100);
 }
 
+.footer p{
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: rgb(196, 196, 196);
+  background-color: gray;
+  padding: 0.5%;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
 .card-grid {
   display: flex;
   flex-direction: row;
@@ -115,24 +132,32 @@ h3 {
   }
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 885px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   h3 {
     font-size: 2rem;
   }
 }
 
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 605px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    -webkit-text-stroke: 0.7px rgb(100, 100, 100);
   }
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 510px) {
   body {
     padding: 5%;
+  }
+  .footer {
+    font-size: smaller;
+    padding: 5px;
+  }
+  .footer p{
+    justify-content: center;
   }
   h1 {
     font-size: 1.6rem;
