@@ -20,11 +20,13 @@ export const App = () => {
     <div>
       <h1 className="comic-neue-bold">Encuentra tus mejores gifs</h1>
       <AddCategory onNewCategory={onAddCategory} />
-      <button onClick={clean} ><AiOutlineClear /></button>
+      <button onClick={clean}>
+        <AiOutlineClear />
+      </button>
       {categories.map((category) => (
         <GifGrid key={category} category={category} />
       ))}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

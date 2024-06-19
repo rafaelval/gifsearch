@@ -1,23 +1,24 @@
 import { useEffect, useState } from "react";
 import { getGifs } from "../Helpers/getGifs";
 
-function useFetchGifs(category){
-      const[images,setImages] = useState([])
-      const[isLoading, setIsLoading] = useState(true)
+function useFetchGifs(category) {
+  const [images, setImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-      const getImages = async() => {
-            const newImages = await getGifs(category)
-            setImages(newImages)
-            setIsLoading(false)
-      }
+  const getImages = async () => {
+    const newImages = await getGifs(category);
+    setImages(newImages);
+    setIsLoading(false);
+  };
 
-      useEffect(() => {
-        getImages() //eslint-disable-next-line
-      }, [])
-      
-      return {
-            images,isLoading
-      }
+  useEffect(() => {
+    getImages(); //eslint-disable-next-line
+  }, []);
+
+  return {
+    images,
+    isLoading,
+  };
 }
 
-export default useFetchGifs
+export default useFetchGifs;
