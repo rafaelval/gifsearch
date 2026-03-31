@@ -433,3 +433,45 @@ h3 {
   min-width: 120px;
   text-align: center;
 }
+
+/* Estilos para el hint de copia */
+.copy-hint {
+  position: absolute;
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  animation: fadeInOut 2s ease-in-out;
+  pointer-events: none;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+}
+
+.card-image-container {
+  position: relative;
+}
