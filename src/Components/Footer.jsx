@@ -6,8 +6,8 @@ export const Footer = () => {
       <p>
         &#169; 2024 Rafael Valbuena. Todos los derechos reservados. Imágenes
         propiedad de{" "}
-        <a href="https://tenor.com/es/" target="blank">
-          Tenor.com
+        <a href="https://klipy.com/" target="blank">
+          Klipy.com
         </a>
       </p>
     </div>

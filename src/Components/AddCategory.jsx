@@ -4,7 +4,8 @@ export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = (e) => {
-    setInputValue(e.target.value);
+    const value = e.target.value;
+    setInputValue(value);
   };
 
   const onSubmit = (e) => {
@@ -15,13 +16,14 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className="add-category-form">
       <input
         type="text"
-        placeholder="Buscar gifs"
+        placeholder="Buscar gifs..."
         value={inputValue}
         onChange={onInputChange}
       />
+      <button type="submit">Buscar</button>
     </form>
   );
 };

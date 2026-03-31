@@ -1,30 +1,33 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AddCategory } from "./Components/AddCategory";
+import { Categories } from "./Components/Categories";
 import { GifGrid } from "./Components/GifGrid";
 import { AiOutlineClear } from "react-icons/ai";
 import { Footer } from "./Components/Footer";
 
 export const App = () => {
-  const [categories, setCategories] = useState([]);
+  const [searchQueries, setSearchQueries] = useState([]);
 
   const onAddCategory = (newCategory) => {
-    if (categories.includes(newCategory)) return;
-    setCategories([newCategory, ...categories]);
+    if (searchQueries.includes(newCategory)) return;
+    setSearchQueries([newCategory, ...searchQueries]);
   };
 
   const clean = () => {
-    setCategories([]);
+    setSearchQueries([]);
   };
 
   return (
     <div>
       <h1 className="comic-neue-bold">Encuentra tus mejores gifs</h1>
+      <Categories onCategoryClick={onAddCategory} />
       <AddCategory onNewCategory={onAddCategory} />
       <button onClick={clean}>
         <AiOutlineClear />
       </button>
-      {categories.map((category) => (
-        <GifGrid key={category} category={category} />
+      <GifGrid category="Trending" />
+      {searchQueries.map((query) => (
+        <GifGrid key={query} category={query} />
       ))}
       <Footer />
     </div>
